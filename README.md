@@ -1,2 +1,4 @@
 # charJs-dashboard
-Dashboard criada para atividade de Pesquisa e Inovação - Ultilizando a biblioteca Char.Js
+Dashboard criada para atividade de Pesquisa e Inovação - Utilizando a biblioteca Char.Js
+
+Aplicação de 2 gráficos
