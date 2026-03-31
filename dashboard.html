@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Char.Js</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="menu">
+        <img class="logo" src="assets/logo/logo-branca.png" alt="">
+
+        <div class="item">
+            <img class="icons" src="assets/img/icons/dashboard-icon.png" alt="">
+            <a href="dashboard.html" class="ativo">Dashboard</a>
+        </div>
+
+        <div class="item logout-container">
+            <a href="#" class="logout">Sair</a>
+        </div>
+    </div>
+    <div class="conteudo">
+
+        <div class="topo">
+            <span>ADM ESTHER</span>
+        </div>
+
+        <h1>DASHBOARD - Char.Js</h1>
+
+        <div>
+            <canvas id="myChart-linha"></canvas>
+        </div>
+
+        <div>
+            <canvas id="myChart-coluna"></canvas>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    const labels1 = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
+    const data1 = {
+        labels: labels1,
+        datasets: [
+            {
+                label: 'Temperatura',
+                data: [30, 29, 28, 25, 22, 23],
+                borderColor: '#EE6084',
+                backgroundColor: '#EE6084',
+                tension: 0.1
+            },
+            {
+                label: 'Umidade',
+                data: [80, 82, 80, 85, 80, 83],
+                borderColor: '#3AA2EC',
+                backgroundColor: '#3AA2EC',
+                tension: 0.1
+            }
+        ]
+    };
+
+
+
+    const ctx1 = document.getElementById('myChart-linha');
+    const config1 = {
+        type: 'line',
+        data: data1,
+    };
+    new Chart(ctx1, config1);
+
+
+    const labels2 = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'];
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Temperatura Média',
+            data: [22, 24, 27, 23, 20, 18],
+            backgroundColor: [
+                '#EE6084'
+
+            ],
+            borderColor: [
+                '#EE6084'
+            ],
+        }, {
+            label: 'Umidade média',
+            data: [90, 89, 93, 87, 88, 82],
+
+            backgroundColor: [
+                '#3AA2EC'
+            ],
+            borderColor: [
+                '#3AA2EC'
+            ],
+
+        }]
+    };
+    const ctx2 = document.getElementById('myChart-coluna');
+    const config2 = {
+        type: 'bar',
+        data: data2,
+    };
+    new Chart(ctx2, config2);
+</script>
+
