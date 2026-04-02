@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body{
     font-family: "Lora", serif;
     display: flex;
     background-color: #eef3ee;
 }
+
+h1{
+    font-size: 44px;
+    font-weight: 900;
+    color: #6f204f;
+    margin-bottom: 20px;
+}
+
+.topo span{
+    font-size: 20px;
+    color: #6f204f;
+}
+
 .menu {
     display: flex;
     width: 200px;
@@ -23,22 +36,17 @@ body {
     flex-direction: column;
 }
 
-.menu .logo {
-    width: 150px;
-    margin-bottom: 36px;
-}
-
-.item {
+.item{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.menu .icons {
+.menu .icons{
     width: 20px;
 }
 
-.menu a {
+.menu a{
     flex: 1;
     color: #d5f1e0;
     text-decoration: none;
@@ -46,22 +54,24 @@ body {
     border-radius: 8px;
     font-size: 14px;
     border-left: 3px solid transparent;
-}
-
-.menu a:hover, .menu a.ativo {
     background-color: #6f204f;
     color: #ffffff;
-    border-left-color: #9d2b90;
 }
 
-.logout-container {
-    margin-top: auto;
+.graficos-container{
+    display: flex;
+    flex-direction: row;
 }
 
-.logout {
-    color: #f0e4ee !important;
+#myChart-linha{
+    width: 500px;
 }
-.conteudo {
+
+#myChart-coluna{
+    width: 500px;
+}
+
+.conteudo{
     margin-left: 200px;
     flex: 1;
     padding: 28px 30px;
@@ -69,19 +79,3 @@ body {
     min-height: 100vh;
 }
 
-.topo {
-    text-align: right;
-    background-color: #4a1a48;
-    margin: -28px -30px 28px -30px;
-    padding: 14px 30px;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 44px;
-    font-weight: 900;
-    color: #6f204f;
-    margin-bottom: 20px;
-}

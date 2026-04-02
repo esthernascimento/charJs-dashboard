@@ -11,32 +11,31 @@
 
 <body>
     <div class="menu">
-        <img class="logo" src="assets/logo/logo-branca.png" alt="">
 
         <div class="item">
             <img class="icons" src="assets/img/icons/dashboard-icon.png" alt="">
             <a href="dashboard.html" class="ativo">Dashboard</a>
         </div>
 
-        <div class="item logout-container">
-            <a href="#" class="logout">Sair</a>
-        </div>
     </div>
     <div class="conteudo">
 
         <div class="topo">
-            <span>ADM ESTHER</span>
+            <span>Atividade de Pesquisa e Inovação</span>
         </div>
 
         <h1>DASHBOARD - Char.Js</h1>
 
-        <div>
-            <canvas id="myChart-linha"></canvas>
+        <div class="graficos-container">
+            <div>
+                <canvas id="myChart-linha"></canvas>
+            </div>
+
+            <div>
+                <canvas id="myChart-coluna"></canvas>
+            </div>
         </div>
 
-        <div>
-            <canvas id="myChart-coluna"></canvas>
-        </div>
     </div>
 
 </body>
@@ -108,4 +107,3 @@
     };
     new Chart(ctx2, config2);
 </script>
-
